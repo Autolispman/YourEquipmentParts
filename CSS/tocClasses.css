@@ -1,0 +1,55 @@
+body {
+  background-color: #C1BEB5
+  /*background-color: #F5F4F1;
+  */
+}
+
+.tocDiv {
+  margin: 10px 0px 0px 10px;
+}
+
+/*.tocHead {
+   border-width: 1px;    
+    border-style: solid;    
+    font-weight: bold;    
+}*/
+
+.tocHead
+{
+	font-weight: bold;
+}
+.tocHead td
+{
+	border-bottom: 1px solid #666666;
+	border-left: 1px solid #666666;
+  border-top: 1px solid #666666;
+}
+.tocHead td:first-child 
+{
+	width: 95%;
+}
+.tocHead td:last-child
+{
+	border-right: 1px solid #666666;
+}
+
+.tocElement {
+   font-size: 14px;    
+}
+
+.tocElemHidden {
+  visibility: hidden;
+  display: none;
+}
+
+.tocElemShown {
+  visibility: show;
+}
+
+.tocSelected {
+  background-color: crimson
+}
+
+.tocMouseOver {
+  background-color: #BEDAE5
+}
