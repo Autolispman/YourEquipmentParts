@@ -1,0 +1,14 @@
+.sliderProps {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    background-color: #01A9DB;
+    margin-top: 10px;
+
+}
+
+.sliderElemHidden {
+    visibility: hidden;
+    display: none;
+  }
+  

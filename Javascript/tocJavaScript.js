@@ -127,25 +127,11 @@ function collapseChildren(collapseChildrenEl) {
         imgDivContainerDivs[loadImageI].classList.add("imgDivHidden")
       }      
     }
-    var partsDivContainer = document.getElementById("divPartsContainer")
-    var partsDivContainerDivs = partsDivContainer.getElementsByTagName("tr");
-    for(loadImageI = 0; loadImageI < partsDivContainerDivs.length; loadImageI++) {
-      if(partsDivContainerDivs[loadImageI].id.substr(0, 8) == "divParts") {
-        partsDivContainerDivs[loadImageI].classList.add("partsDivHidden")
-      }      
-    }
     if(grandParentIdNo !== 0) {
       var imgToMakeCurrent = document.getElementById("divImg" + grandParentIdNo)
       imgToMakeCurrent.classList.remove("imgDivHidden")
-    }    
-    //var partToMakeCurrent = document.getElementById("divParts" + grandParentIdNo)
-    //partToMakeCurrent.classList.remove("partsDivHidden")
-    var partsTable = document.getElementById("partsTable");
-    for(partsTableI = 0; partsTableI < partsTable.rows.length; partsTableI++) {
-      if(Number(partsTable.rows[partsTableI].id.substr(8)) == grandParentIdNo) {
-        partsTable.rows[partsTableI].classList.remove("partsDivHidden");
-      }
-    }
+    } 
+    
     if(imgToMakeCurrent != undefined)
     {
     if(imgToMakeCurrent.getElementsByTagName("img").length === 0) {    
@@ -162,8 +148,28 @@ function collapseChildren(collapseChildrenEl) {
           //$(loadImageSpansImg).insertAfter(father.children[father.children.length]);
       }
     }
+    loadParts(grandParentIdNo);
   }
 }
+
+function loadParts(grandParentIdNo) {
+var partsDivContainer = document.getElementById("divPartsContainer")
+    var partsDivContainerDivs = partsDivContainer.getElementsByTagName("tr");
+    for(loadImageI = 0; loadImageI < partsDivContainerDivs.length; loadImageI++) {
+      if(partsDivContainerDivs[loadImageI].id.substr(0, 8) == "divParts") {
+        partsDivContainerDivs[loadImageI].classList.add("partsDivHidden")
+      }      
+    }
+       
+    //var partToMakeCurrent = document.getElementById("divParts" + grandParentIdNo)
+    //partToMakeCurrent.classList.remove("partsDivHidden")
+    var partsTable = document.getElementById("partsTable");
+    for(partsTableI = 0; partsTableI < partsTable.rows.length; partsTableI++) {
+      if(Number(partsTable.rows[partsTableI].id.substr(8)) == grandParentIdNo) {
+        partsTable.rows[partsTableI].classList.remove("partsDivHidden");
+      }
+    }
+  }
 
   //function to highlight toc items when mouse over
   function tocMouseOver(tocMouseOverElem) {
