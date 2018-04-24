@@ -4,7 +4,7 @@
     position: absolute;
     background-color: #01A9DB;
     margin-top: 10px;
-
+    z-index: 1000;
 }
 
 .sliderElemHidden {

@@ -1,7 +1,15 @@
-body {
-  background-color: #C1BEB5
+html, body {
+  background-color: #C1BEB5;
+  width: 100%;
   /*background-color: #F5F4F1;
   */
+}
+
+.divCont {
+  position: absolute;
+  overflow: auto;
+  width: 98%;
+  height: 98%;  
 }
 
 .tocDiv {
